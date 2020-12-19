@@ -1,6 +1,8 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+It includes 20 cities with 5 cities per page and a search feature where you can find the weather of any city
+in the world.
 
 ## Available Scripts
 
