@@ -19,6 +19,7 @@ const Home = () => {
   const [searchCity, setSearchCity] = useState("");
   const [showCities, setShowCities] = useState(true);
   const [searchedCityData, setSearchedCityData] = useState("");
+  const [count,setCount] = useState(0);
 
   const { citiesPerPage } = pagination;
   const pageNumbers = [];
@@ -70,7 +71,7 @@ const Home = () => {
     if (!showCities) {
       fetchWeatherOfSingleCity(searchCity);
     }
-  }, [showCities]);
+  }, [showCities,count]);
 
   const handleSearchCity = (event) => {
     //console.log("searching");
@@ -84,6 +85,7 @@ const Home = () => {
   const findWeatherOfSearchedCity = (event) => {
     event.preventDefault();
     setShowCities(false);
+    setCount(count+1);
   };
 
   const handlePageNumber = (event) => {
