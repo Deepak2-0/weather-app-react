@@ -86,6 +86,10 @@ const Home = () => {
 
   const findWeatherOfSearchedCity = (event) => {
     event.preventDefault();
+    if(searchCity.length === 0){
+      setSearchedCityData(true);
+      return;
+    }
     setShowCities(false);
     setCount(count+1);
   };
