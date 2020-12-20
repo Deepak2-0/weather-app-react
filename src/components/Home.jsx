@@ -19,7 +19,9 @@ const Home = () => {
   const [searchCity, setSearchCity] = useState("");
   const [showCities, setShowCities] = useState(true);
   const [searchedCityData, setSearchedCityData] = useState("");
-  const [count,setCount] = useState(0);
+  const [count,setCount] = useState(0); //to fix the bug which occurs when show is false and clicked again, useState is not
+  //is not again fetching the weather happens when user first try with a wrong spelling of a place and then
+  //try to modify it but not prior to this first had to empty the search and then type the place
 
   const { citiesPerPage } = pagination;
   const pageNumbers = [];
